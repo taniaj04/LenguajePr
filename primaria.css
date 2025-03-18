@@ -1,0 +1,141 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('images/fondojuego.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    text-align: center;
+    background: rgba(0, 217, 255, 0.404);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 40px 30px;
+    max-width: 800px; 
+    margin: 0 auto;
+    transform: scale(1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+h1 {
+    color: #000000;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #000000;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.sopa-letras {
+    display: grid;
+    grid-template-columns: repeat(10, 50px); 
+    gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sopa-letras div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.sopa-letras div:hover {
+    transform: scale(1.1);
+    background-color: #ffeb3b;
+}
+
+.sopa-letras div.seleccionado {
+    background-color: #4caf50;
+    color: white;
+    transform: scale(1.2);
+}
+
+.lista-palabras {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.lista-palabras li {
+    font-size: 1.2em;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.lista-palabras li.encontrada {
+    background: #4caf50;
+    text-decoration: line-through;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #fda085, #f6d365);
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

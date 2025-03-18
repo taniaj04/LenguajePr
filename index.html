@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguaje primaria</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title-box">
+            <h1>¡Bienvenido a la Sopa de Letras interactiva! </h1>
+        </div>
+        <h3>Explora y adquiere más conocimientos de Lenguaje. Lee las instrucciones y empieza el juego.</h3>
+
+        <div class="info-container">
+            <div class="info-box">
+                <h2>Juego para primaria</h2>
+                <p>En este juego, tendrás el desafío de encontrar una lista de verbos ocultos dentro de una cuadrícula llena de letras.</p><p>Desarrolla tus habilidades de observación y vocabulario mientras seleccionas las letras para formar palabras completas de la lista.
+                </p>
+                <p>¿Listo para empezar el juego?</p>
+                <button id="boton-sonido">Empezar juego</button>
+                <audio id="sonido-boton" src="sonido.mp3"></audio>
+                <script>
+                    const boton = document.getElementById('boton-sonido');
+                    const sonido = document.getElementById('sonido-boton');
+                
+                    boton.addEventListener('click', () => {
+                        sonido.currentTime = 0;
+                        sonido.play();
+                
+                        sonido.onended = () => {
+                            window.location.href = 'primaria.html';
+                        };
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
