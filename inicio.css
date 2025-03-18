@@ -26,7 +26,11 @@ body {
     text-align: center;
     position: relative;
     z-index: 2;
-    animation: fadeIn 1s ease-in-out; 
+    animation: fadeIn 1s ease-in-out;
+    background: rgba(37, 80, 109, 0.8); 
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -69,15 +73,18 @@ p {
 
 .info-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 30px;
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 
 .info-box {
     background: rgba(177, 196, 3, 0.705);
     color: rgb(0, 225, 255);
     padding: 20px;
-    width: 100%;
+    width: 90%;
+    max-width: 600px;
     border-radius: 50px;
     text-align: center; 
     display: flex;
