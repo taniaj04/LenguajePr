@@ -57,10 +57,9 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    max-width: 90vw; 
-    max-height: 70vh;
-    width: auto;
-    height: auto;
+    max-width: 90vw;
+    max-height: 70vh; 
+    transform-origin: center;
 }
 
 .sopa-letras div {
@@ -123,26 +122,34 @@ p {
 
 @media (max-width: 1024px) {
     .sopa-letras {
-        max-width: 80vw;
-        max-height: 60vh;
+        transform: scale(0.9); 
     }
 }
 
 @media (max-width: 768px) {
     .sopa-letras {
         grid-template-columns: repeat(8, minmax(25px, 40px));
-        max-width: 70vw;
-        max-height: 50vh;
+        transform: scale(0.8); 
+    }
+
+    .sopa-letras div {
+        width: min(10vw, 35px);
+        height: min(10vw, 35px);
     }
 }
 
 @media (max-width: 480px) {
     .sopa-letras {
         grid-template-columns: repeat(6, minmax(20px, 35px)); 
-        max-width: 60vw;
-        max-height: 40vh;
+        transform: scale(0.7); 
+    }
+
+    .sopa-letras div {
+        width: min(12vw, 30px);
+        height: min(12vw, 30px);
     }
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
