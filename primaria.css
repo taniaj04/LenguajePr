@@ -57,12 +57,15 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    max-width: 90vw; 
+    max-height: 70vh;
+    transform-origin: center;
 }
 
 .sopa-letras div {
-    width: min(8vw, 50px);  
-    height: min(8vw, 50px); 
-    font-size: clamp(14px, 2vw, 20px); 
+    width: min(7vw, 45px);  
+    height: min(7vw, 45px); 
+    font-size: clamp(12px, 1.8vw, 22px); 
 }
 .sopa-letras div:hover {
     transform: scale(1.1);
@@ -117,41 +120,33 @@ p {
     transform: translateY(-3px);
 }
 
+@media (max-width: 1024px) {
+    .sopa-letras {
+        transform: scale(0.9);
+    }
+}
+
 @media (max-width: 768px) {
-    .main-container {
-        width: 100%;
-        min-height: auto;
-        padding: 20px;
+    .sopa-letras {
+        grid-template-columns: repeat(8, minmax(25px, 40px));
+        transform: scale(0.8); 
     }
 
-    .sopa-letras {
-        grid-template-columns: repeat(10, minmax(40px, 1fr));
-        overflow-x: auto;
+    .sopa-letras div {
+        width: min(10vw, 35px);
+        height: min(10vw, 35px);
     }
 }
 
 @media (max-width: 480px) {
     .sopa-letras {
         grid-template-columns: repeat(6, minmax(20px, 35px)); 
+        transform: scale(0.7);
     }
 
     .sopa-letras div {
-        width: min(12vw, 35px);
-        height: min(12vw, 35px);
-    }
-
-    .lista-palabras li {
-        font-size: 1em;
-        padding: 5px;
-    }
-
-    .button {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 1.8em;
+        width: min(12vw, 30px);
+        height: min(12vw, 30px);
     }
 }
 @keyframes fadeIn {
