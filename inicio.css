@@ -1,15 +1,17 @@
 body {
     font-family: 'Arial', sans-serif;
-    height: 100vh;
+    min-height: 100vh; 
     margin: 0;
     background: url('images/fondo.jpg') no-repeat center center fixed;
     background-size: cover;
-    overflow: hidden;
-    color: rgb(255, 255, 255);
+    overflow-x: hidden; 
+    color: white;
     position: relative;
     display: flex; 
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    flex-direction: column; 
+    padding: 20px;
 }
 
 .background-overlay {
