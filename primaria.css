@@ -59,7 +59,8 @@ p {
     overflow: hidden;
     max-width: 90vw; 
     max-height: 70vh;
-    transform-origin: center;
+    width: auto;
+    height: auto;
 }
 
 .sopa-letras div {
@@ -122,31 +123,24 @@ p {
 
 @media (max-width: 1024px) {
     .sopa-letras {
-        transform: scale(0.9);
+        max-width: 80vw;
+        max-height: 60vh;
     }
 }
 
 @media (max-width: 768px) {
     .sopa-letras {
         grid-template-columns: repeat(8, minmax(25px, 40px));
-        transform: scale(0.8); 
-    }
-
-    .sopa-letras div {
-        width: min(10vw, 35px);
-        height: min(10vw, 35px);
+        max-width: 70vw;
+        max-height: 50vh;
     }
 }
 
 @media (max-width: 480px) {
     .sopa-letras {
         grid-template-columns: repeat(6, minmax(20px, 35px)); 
-        transform: scale(0.7);
-    }
-
-    .sopa-letras div {
-        width: min(12vw, 30px);
-        height: min(12vw, 30px);
+        max-width: 60vw;
+        max-height: 40vh;
     }
 }
 @keyframes fadeIn {
