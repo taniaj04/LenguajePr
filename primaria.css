@@ -8,7 +8,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: auto;
+    overflow-y: auto; 
+    width: 100vw;
 }
 
 .main-container {
@@ -17,7 +19,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     padding: 40px 30px;
-    width: 90%;
+    width: 80%;
     max-width: 1200px;
     min-height: 80vh;
     margin: 20px auto;
@@ -116,29 +118,21 @@ p {
 }
 
 @media (max-width: 768px) {
-    .sopa-letras {
-        grid-template-columns: repeat(8, minmax(25px, 40px)); /* Reduce las columnas */
-    }
-
-    .sopa-letras div {
-        width: min(10vw, 40px);
-        height: min(10vw, 40px);
-    }
-
     .main-container {
-        width: 95%;
+        width: 100%;
+        min-height: auto;
         padding: 20px;
     }
 
-    h1 {
-        font-size: 2em;
+    .sopa-letras {
+        grid-template-columns: repeat(10, minmax(40px, 1fr));
+        overflow-x: auto;
     }
 }
 
-/* Ajuste para móviles (menos de 480px) */
 @media (max-width: 480px) {
     .sopa-letras {
-        grid-template-columns: repeat(6, minmax(20px, 35px)); /* Reduce más las columnas */
+        grid-template-columns: repeat(6, minmax(20px, 35px)); 
     }
 
     .sopa-letras div {
